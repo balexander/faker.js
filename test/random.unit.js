@@ -321,4 +321,15 @@ describe("random.js", function () {
     });
   })
 
+  describe("word", function () {
+    it("returns a single word", function() {
+      var samples = 50;
+
+      for (var i = 0; i < samples; i++) {
+        var word = faker.random.word();
+        assert(word.indexOf(' ') === -1);
+      }
+    })
+  });
+
 });
